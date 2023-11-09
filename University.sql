@@ -27,7 +27,7 @@ create table course (
 	);
 	
 create table instructor (
-	 ID			varchar(5), 
+	 ID				varchar(5), 
 	 name			varchar(20) not null, 
 	 dept_name		varchar(20), 
 	 salary			numeric(8,2) check (salary > 29000),
@@ -34747,4 +34747,33 @@ SELECT s.name AS Nama_Mahasiswa, i.name AS Nama_Instructor, s.dept_name AS Depar
 FROM student s
 INNER JOIN instructor i ON s.dept_name = i.dept_name;
 
+select concat (ID, ' - ', name) as NIM_NAMA from STUDENT;
+
+SELECT substr(dept_name, 1, 7) AS Jurusan FROM department;
+
+select length (building) as building_length from classroom;
+
+select replace(title, 'Intro', 'Introduction') as new_title from course;
+
+select abs(salary) as abs_salary from instructor;
+
+select ceiling(budget) as rounded_budget from department;
+
+select floor(capacity) as rounded_capacity from classroom;
+
+select round(credits, 1) as rounded_credits from course;
+
+select curdate();
+
+select curtime();
+
+select sum(budget) as total_budget from department;
+
+select count(*) as total_students from student;
+
+select avg(salary) as avarage_salary from instructor;
+
+select min(capacity) as min_capacity from classroom;
+
+select max(salary) as max_salary from instructor;
 
