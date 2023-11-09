@@ -144,3 +144,4 @@ select max(salary) as max_salary
 from instructor;
 ```
 ![Gambar](./ss/15.png)
+
